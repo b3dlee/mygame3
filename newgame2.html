@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Draggable Image Grid</title>
+	<style>
+		.container {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: auto;
+			position: absolute;
+		}
+		img:nth-child(1) {
+			top: 0;
+			left: 0;
+		}
+		img:nth-child(2) {
+			top: 0;
+			left: 20%;
+		}
+		img:nth-child(3) {
+			top: 0;
+			left: 40%;
+		}
+		img:nth-child(4) {
+			top: 0;
+			left: 60%;
+		}
+		img:nth-child(5) {
+			top: 0;
+			left: 80%;
+		}
+		img:nth-child(6) {
+			top: 50%;
+			left: 0;
+		}
+		img:nth-child(7) {
+			top: 50%;
+			left: 20%;
+		}
+		img:nth-child(8) {
+			top: 50%;
+			left: 40%;
+		}
+		img:nth-child(9) {
+			top: 50%;
+			left: 60%;
+		}
+		img:nth-child(10) {
+			top: 50%;
+			left: 80%;
+		}
+
+		img:nth-child(11) {
+			top: 70%;
+			left: 0%;
+		}
+		img:nth-child(12) {
+			top: 70%;
+			left: 20%;
+		}
+		img:nth-child(13) {
+			top: 70%;
+			left: 40%;
+		}
+		img:nth-child(14) {
+			top: 70%;
+			left: 60%;
+		}
+		img:nth-child(15) {
+			top: 70%;
+			left: 80%;
+		}
+		img:nth-child(16) {
+			top: 90%;
+			left: 0%;
+		}
+		img:nth-child(17) {
+			top: 90%;
+			left: 20%;
+		}
+		img:nth-child(18) {
+			top: 90%;
+			left: 40%;
+		}
+		img:nth-child(19) {
+			top: 90%;
+			left: 60%;
+		}
+		img:nth-child(20) {
+			top: 90%;
+			left: 80%;
+		}
+		img:nth-child(16) {
+			top: 98%;
+			left: 0%;
+		}
+		img:nth-child(17) {
+			top: 90%;
+			left: 20%;
+		}
+		img:nth-child(18) {
+			top: 98%;
+			left: 40%;
+		}
+		img:nth-child(19) {
+			top: 98%;
+			left: 60%;
+		}
+		img:nth-child(20) {
+			top: 98%;
+			left: 80%;
+		}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<img src="https://i.ibb.co/qCyR1fw/image-0.png" alt="Image 1" draggable = "true" onmousedown="drag(event)">
+
+		<img src="https://i.ibb.co/yQ3pTC3/top1.png" alt="Image 4" 
+		width="350" height="350"
+		draggable = "true" onmousedown="drag(event)">
+		
+
+		<img src="https://i.ibb.co/syyYSXV/baji1.png" alt="Image 2" draggable = "true" onmousedown="drag(event)"
+		width = "300" height="300" >
+
+		<img src="https://i.ibb.co/sv6KK3c/baji2.png" alt="Image 3" draggable = "true" onmousedown="drag(event)"
+		width = "380" height="350" >
+
+		<img src="https://i.ibb.co/v1nKqmY/baji3.png" alt="Image 9"
+        width = "300" height="300" 
+        draggable = "true"
+        onmousedown="drag(event)"
+        onmouseover="this.style.border='5px solid black';" 
+        onmouseout="this.style.border='none';">
+		
+        <img src="https://i.ibb.co/tL0CCMV/baji33.png" alt="Image 10" 
+        width = "200" height="200"
+        draggable = "true"
+     	onclick="this.style.width='500px';"
+        onmousedown="drag(event)"
+        onmouseover="this.style.border='5px solid black';" 
+        onmouseout="this.style.border='none';"
+	    onmousedown="if(event.button==2){this.style.width=parseInt(this.style.width)+10+'px';this.style.height=parseInt(this.style.height)+10+'px';}" 
+	    onmouseup="if(event.button==2){this.style.width=parseInt(this.style.width)-10+'px';this.style.height=parseInt(this.style.height)-10+'px';}">
+
+		
+		<img src="https://i.ibb.co/2Pr2xmW/blouse1.png" alt="Image 5" 
+		width = "500" height="500"
+		draggable = "true" onmousedown="drag(event)">
+
+		<img src="https://i.ibb.co/2Pr2xmW/blouse1.png" alt="Image 5" 
+		width = "600" height="600"
+		draggable = "true" onmousedown="drag(event)">
+
+		<img src="https://i.ibb.co/yQ3pTC3/top1.png" alt="Image 4" 
+		width="350" height="350"
+		draggable = "true" onmousedown="drag(event)">
+
+		<img src="https://i.ibb.co/X4Bg8yD/top2.png" alt="Image 4" 
+		width="350" height="350"
+		draggable = "true" onmousedown="drag(event)">
+
+		<img src="https://i.ibb.co/B6jLNBC/top3.png" alt="Image 4" 
+		width="350" height="350"
+		draggable = "true" onmousedown="drag(event)">
+		
+		
+		<img src="https://i.ibb.co/rfkN0D9/knit1.png" alt="Image 4" 
+		width="300" height="300"
+		draggable = "true" onmousedown="drag(event)">
+
+		<img src="https://i.ibb.co/xCv3SN0/knit2.png" alt="Image 4" 
+		width="250" height="250"
+		draggable = "true" onmousedown="drag(event)">
+
+		<img src="https://i.ibb.co/2F51CNv/hair22.png" alt="Image 6" draggable = "true" onmousedown="drag(event)"
+		width = "350" height="350" >
+		<img src="https://i.ibb.co/2YfvVpQ/hair24.png" alt="Image 6" draggable = "true" onmousedown="drag(event)"
+		width = "340" height="340" >
+		<img src="https://i.ibb.co/hdFg0nS/hair222.png" alt="Image 6" draggable = "true" onmousedown="drag(event)"
+		width = "350" height="350" >
+		<img src="https://i.ibb.co/JBMYRwq/hairtw2.png" alt="Image 6" draggable = "true" onmousedown="drag(event)"
+		width = "400" height="400" >
+		<img src="https://i.ibb.co/g3WRnZM/hairtw3.png" alt="Image 6" draggable = "true" onmousedown="drag(event)"
+		width = "400" height="400" >
+		<img src="https://i.ibb.co/P4ScK9h/hairpink.png" alt="Image 6" draggable = "true" onmousedown="drag(event)"
+		width = "200" height="250" >
+
+
+		<img src="https://i.ibb.co/9tWCBLZ/hair1.png" alt="Image 6" draggable = "true" onmousedown="drag(event)"
+		width = "200" height="200" >
+		<img src="https://i.ibb.co/JFXkCVP/hair2.png" alt="Image 7" draggable = "true" onmousedown="drag(event)">
+
+		<img src="https://i.ibb.co/5sgLWgr/ribbon1.png" alt="Image 8" draggable = "true" onmousedown="drag(event)">
+		
+        
+	</div>
+
+    
+	<script>
+		function drag(event) {
+			event.preventDefault();
+			let currentX = event.clientX;
+			let currentY = event.clientY;
+			let img = event.target;
+			let initialX = currentX - img.offsetLeft;
+			let initialY = currentY - img.offsetTop;
+
+			function move(event) {
+				currentX = event.clientX;
+				currentY = event.clientY;
+
+				let newX = currentX - initialX;
+				let newY = currentY - initialY;
+
+				img.style.left = newX + 'px';
+				img.style.top = newY + 'px';
+			}
+
+			function stop() {
+				document.removeEventListener('mousemove', move);
+				document.removeEventListener('mouseup', stop);
+			}
+
+			document.addEventListener('mousemove', move);
+			document.addEventListener('mouseup', stop);
+		}
+	</script>
+
+
+</body>
+</html>
